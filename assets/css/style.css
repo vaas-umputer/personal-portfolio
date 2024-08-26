@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root{
+    --color-base:#116466;
+    --color-base2:#1b777c;
+    --color-body:#ffffff;
+    --color-heading:#D1E8E2;
+    --color-brand:#D9B08C;
+    --color-brand2:#FFCB9A;
+    --font-base:"Bai Jamjuree";
+    --sidebar-width:240px
+}
+
+body{
+    background-color:var(--color-base);
+    color:var(--color-body);
+    font-family:var(--font-base,sans-serif);
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:var(--color-heading);
+    font-weight:400;
+}
+
+
+a{
+    text-decoration:none;
+    color:var(--color-body);
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    color:var(--color-brand);
+}
+
+img{
+    width:100%;
+}
+
+.navbar{
+    background-color:rgba(10, 80, 82, 0.9);
+    padding:20px;
+}
+
+.dropdown-menu{
+    background-color: #ddb189;
+}
+
+.dropdown-item:hover{
+    background-color:#d39b66 ;
+}
+
+.navbar .nav-link{
+    font-weight:700;
+    text-transform:uppercase;
+    color:var(--color-heading);
+}
+
+.navbar .nav-link:hover{
+    color:var(--color-brand)
+}
+
+
+
+.full-height{
+    min-height:100vh;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    border-bottom:2px solid #7bc7c9;
+    padding:20px;
+}
+
+@media(min-width:992px){
+    .navbar{
+        height:100vh;
+        width:var(--sidebar-width);
+        background:linear-gradient( 135deg,rgba(15, 91, 92, 0.95),rgba(16, 141, 148, 0.95)),url(../images/nezuko-bg.jpg);
+        background-size:cover;
+        background-position:center;
+    }
+
+    .navbar-brand img{
+        border:6px solid #d39b66;
+    
+    }
+
+    .content-wrapper{
+        padding-left: var(--sidebar-width);
+        
+    }
+}
+
+.brand-text{
+    color:var(--color-brand2);
+    
+}
+
+.container{
+    font-weight:500;
+}
+
+
+.icon-box{
+    background-color:var(--color-brand);
+    display:flex;
+    width:60px;
+    height:60px;
+    font-size:32px;
+    align-items:center;
+    justify-content:center;
+    color: rgb(65, 51, 51);
+
+}
+
+.bg-base{
+    background-color: var(--color-base2);
+}
+
+.shadow-effect{
+    transition:all 0.4s;
+}
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0 var(--color-brand2);
+}
+
+.navbar .nav-link.active{
+    color:var(--color-brand2);
+}
+
+.card-custom{
+    background-color: var(--color-base2);
+    color:var(--color-heading);
+    
+}
+
+.card-custom-img{
+    overflow:hidden;
+}
+
+
+
+.card-custom .card-custom-img img{
+    transition:all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-img img{
+    transform:scale(1.1);
+}
+
+ul.timeline{
+    list-style-type:none;
+    position:relative;
+}
+
+ul.timeline:before{
+    content:"";
+    position:absolute;
+    display:inline-block;
+    width:2px;
+    height:100%;
+    background:var(--color-brand);
+    left:29px;
+    z-index:400;
+
+}
+
+ul.timeline > li{
+    margin:0px 20px;
+}
+
+ul.timeline > li:before{
+    content:"";
+    position:absolute;
+    background:var(--color-base);
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:3px solid var(--color-brand);
+    left:20px;
+    z-index:400;
+}
+
+a.float-right{
+    float:right;
+}
